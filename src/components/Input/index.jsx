@@ -15,7 +15,9 @@ export default function Input({ type, placeholder, label, name, radius }) {
                     cols="30"
                     placeholder={placeholder}
                     style={{borderRadius: radius ? `${radius}px` : '12px'}}
-                    className="bg-background h-32 p-5 border border-border-custom rounded-md"
+                    className="
+                    focus:outline-hidden bg-background h-32 p-5 focus:border-primary
+                    border border-border-custom rounded-md ring focus:ring-primary "
                 >
 
                 </textarea> :
@@ -26,7 +28,9 @@ export default function Input({ type, placeholder, label, name, radius }) {
                     type={type}
                     placeholder={placeholder}
                     style={{borderRadius: radius ? `${radius}px` : '12px'}}
-                    className="bg-background h-12 px-5 border border-border-custom rounded-md"
+                    className="
+                    focus:outline-hidden bg-background h-12 px-5 rounded-md
+                    border border-border-custom ring focus:ring-primary focus:border-primary"
                 />
 
             }

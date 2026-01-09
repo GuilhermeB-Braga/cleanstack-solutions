@@ -1,9 +1,11 @@
 import Accordion from "@/components/Accordion";
 import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
+import Button from "@/components/Layout/Button/Button";
 import Solutions from "@/components/Solutions";
 import Testimonials from "@/components/Testimonials";
 import TitleSection from "@/components/TitleSection";
+import { IoCodeSlash } from "react-icons/io5";
 
 export default function Home() {
 
@@ -19,7 +21,7 @@ export default function Home() {
           subtitle='Soluçoes completas para sua prensença digital'
         />
 
-       <Solutions/>
+        <Solutions />
 
       </section>
 
@@ -30,7 +32,7 @@ export default function Home() {
           subtitle='Depoimentos reais de clientes satisfeitos'
         />
 
-        <Testimonials/>
+        <Testimonials />
 
       </section>
 
@@ -41,11 +43,31 @@ export default function Home() {
           subtitle='Tire suas dúvidas sobre o desenvolvimento do seu site'
         />
 
-        <Accordion/>
-        
+        <Accordion />
+
+        <div
+          className="flex flex-col text-center items-center bg-background-light border border-border-custom rounded-custom p-5 mt-10"
+        >
+
+          <div className="mb-5">
+
+            <h4 className="text-[18px] font-medium mb-1">Ainda tem dúvidas</h4>
+
+            <p className="text-text-muted">Estou aqui para ajudar! Entre em contato e terei prazer em responder todas as suas questões.</p>
+
+          </div>
+
+          <Button
+            name='Falar com o Desenvolvedor'
+            radius={16}
+            icon={<IoCodeSlash/>}
+          />
+
+        </div>
+
       </section>
 
-      <ContactSection/>
+      <ContactSection />
 
     </main>
   );
