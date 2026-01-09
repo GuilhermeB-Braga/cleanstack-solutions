@@ -1,3 +1,4 @@
+import Accordion from "@/components/Accordion";
 import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import Solutions from "@/components/Solutions";
@@ -31,6 +32,17 @@ export default function Home() {
 
         <Testimonials/>
 
+      </section>
+
+      <section className="min-h-[45vh] px-7.5">
+
+        <TitleSection
+          title='Perguntas Frequentes'
+          subtitle='Tire suas dúvidas sobre o desenvolvimento do seu site'
+        />
+
+        <Accordion/>
+        
       </section>
 
       <ContactSection/>
