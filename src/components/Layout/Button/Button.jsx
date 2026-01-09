@@ -1,4 +1,12 @@
-export default function Button({ name, icon, bordered, reverse, radius }) {
+'use client'
+export default function Button({ name, icon, bordered, reverse, radius, link }) {
+
+    function handleFunction(link) {
+        if (link) {
+            return window.open(link, '_blank')
+        }
+    }
+
     return (
         <button
             style={{ borderRadius: radius ? `${radius}px` : undefined }}
@@ -10,10 +18,11 @@ export default function Button({ name, icon, bordered, reverse, radius }) {
             ${reverse ? 'flex-row-reverse' : ''}
 
             ${bordered ?
-                    'border border-primary text-primary hover:bg-primary hover:text-background' :
+                    'border text-primary hover:bg-primary hover:text-background' :
                     'text-background bg-primary hover:bg-primary-hover '}
             
             `}
+            onClick={() => handleFunction(link)}
         >
             <p>{name}</p>
 

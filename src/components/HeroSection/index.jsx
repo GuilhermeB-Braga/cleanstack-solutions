@@ -30,6 +30,7 @@ export default function HeroSection() {
                     name='Ver meu trabalho'
                     icon={<FaAngleRight />}
                     bordered
+                    link='https://guilhermeb.vercel.app/'
                 />
 
                 <Button
