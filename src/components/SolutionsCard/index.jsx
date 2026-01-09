@@ -1,6 +1,12 @@
+'use client'
+import { motion } from 'motion/react'
+
 export default function SolutionsCard({ title, desc, icon }) {
     return (
-        <li className="p-5 border border-border-custom rounded-custom bg-background-light">
+        <motion.li
+            initial={{ opacity: 0, scale: .9, y: -15 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            className="p-5 border border-border-custom rounded-custom bg-background-light">
 
             <div
                 className="
@@ -15,6 +21,6 @@ export default function SolutionsCard({ title, desc, icon }) {
 
             <p>{desc}</p>
 
-        </li>
+        </motion.li>
     )
 }

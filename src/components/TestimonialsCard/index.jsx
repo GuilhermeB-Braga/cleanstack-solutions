@@ -1,9 +1,14 @@
+'use client'
 import { FaStar } from "react-icons/fa";
 import { BiSolidQuoteAltRight } from "react-icons/bi";
+import { motion } from 'motion/react'
 
 export default function TestmonialsCard({ text, name, company }) {
     return (
-        <li className="p-5 border border-border-custom rounded-custom ">
+        <motion.li
+            initial={{ opacity: 0, scale: .9, y: -15 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            className="p-5 border border-border-custom rounded-custom ">
 
             <div className="flex justify-between mb-5">
 
@@ -27,6 +32,6 @@ export default function TestmonialsCard({ text, name, company }) {
 
             <p className="text-text-muted text-[13px]">{company}</p>
 
-        </li>
+        </motion.li>
     )
 }
