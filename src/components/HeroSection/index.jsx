@@ -1,18 +1,13 @@
 import Button from "@/components/Layout/Button/Button";
 import Metrics from "@/components/Metrics";
 import { FaAngleRight, FaWhatsapp } from "react-icons/fa";
+import Logo from "../Logo";
 
 export default function HeroSection() {
     return (
         <section className="flex flex-col p-10 items-center justify-between w-full min-h-screen bg-background-dark">
 
-            <div className="flex justify-center items-center text-[18px]">
-
-                <p className="font-bold">Clean</p>
-                <p>Stack</p>
-                <p className="ml-2.5 text-primary">&lt;Solutions/&gt;</p>
-
-            </div>
+            <Logo />
 
             <div className="text-center mt-7.5 mb-15">
 

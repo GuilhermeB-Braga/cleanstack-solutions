@@ -10,8 +10,8 @@ export default function Input({ type, placeholder, label, name, radius }) {
             {type == 'textarea' ?
 
                 <textarea
-                    name="text"
-                    id="text"
+                    name={name}
+                    id={name}
                     cols="30"
                     placeholder={placeholder}
                     style={{borderRadius: radius ? `${radius}px` : '12px'}}
@@ -22,6 +22,7 @@ export default function Input({ type, placeholder, label, name, radius }) {
 
                 <input
                     id={name}
+                    name={name}
                     type={type}
                     placeholder={placeholder}
                     style={{borderRadius: radius ? `${radius}px` : '12px'}}
